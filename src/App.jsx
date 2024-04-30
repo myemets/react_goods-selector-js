@@ -18,7 +18,7 @@ export const goods = [
 ];
 
 export const App = () => {
-  const [selectedGood, setSelectedGood] = useState('Jam');
+  const [selectedGood, setSelectedGood] = useState(goods[8]);
 
   return (
     <main className="section container">
@@ -43,6 +43,7 @@ export const App = () => {
           {goods.map(good => {
             return (
               <tr
+                key={good}
                 className={classNames('', {
                   'has-background-success-light': good === selectedGood,
                 })}
